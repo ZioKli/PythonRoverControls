@@ -69,7 +69,7 @@ class Rover():
     def sensorLeft(self, distance = 1):
         """
             detects any objects on the left within a given distance
-                parameters
+                parameters:
                     distance(float) default = 1: the maximum distance to trigger the sensor
                 returns:
                     bool: returns true if there is another object within distance
