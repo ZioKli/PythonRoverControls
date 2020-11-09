@@ -1,4 +1,18 @@
 
-from PythonRoverControls.lib import rover
+from PythonRoverControls.lib.rover import Rover
 
-rov = rover.Rover()
+
+
+###########################################
+# Write all code within these margins
+
+# Create a new instance of our Rover class
+
+
+# Then move the rover forward until it is on the target
+
+#
+
+
+
+###########################################
