@@ -9,10 +9,10 @@ from PythonRoverControls.lib.rover import Rover
 # Create a new instance of our Rover class
 
 
-# Then move the rover forward until it is on the target
-
-#
+# Then move the rover forward until it hits the wall
 
 
+# notice that the rover's wheels do NOT stop rotating when it contacts the wall
 
-###########################################
+
+###########################################W
