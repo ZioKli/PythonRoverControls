@@ -1,8 +1,7 @@
 # Rover demo using Simumatik
 # author Zion Klinger
 
-import time
-from rover import Rover
+from lib.rover import Rover
 
 if __name__ == "__main__":
     rov = Rover()
