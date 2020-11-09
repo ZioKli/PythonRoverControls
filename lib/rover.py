@@ -4,6 +4,7 @@ import time
 from PythonRoverControls.lib.Controller import UDP_Controller
 class Rover():
     def __init__(self, slow = 1, medium = 2, fast = 4):
+        self.enabled = True
         self.controller = UDP_Controller()
         self.slow = slow
         self.medium = medium
@@ -20,7 +21,7 @@ class Rover():
                     speed(float): sets the speed of the robot in radians per second
                     duration(float): sets how long the robot should go forward for
         """
-        if speed > 0:
+        if speed > 0 and self.enabled:
             self.controller.setValue("left_speed", speed)
             self.controller.setValue("right_speed", speed)
             time.sleep(duration)
@@ -32,7 +33,7 @@ class Rover():
                     speed(float): sets the speed of the robot in radians per second
                     duration(float): sets how long the robot should go backward for
         """
-        if speed > 0:
+        if speed > 0 and self.enabled:
             self.controller.setValue("left_speed", -speed)
             self.controller.setValue("right_speed", -speed)
             time.sleep(duration)
@@ -43,9 +44,10 @@ class Rover():
                 parameters:
                     duration(float): sets how long the rover should turn for
         """
-        self.controller.setValue("left_speed", self.medium)
-        self.controller.setValue("right_speed", -self.medium)
-        time.sleep(duration)
+        if self.enabled:
+            self.controller.setValue("left_speed", self.medium)
+            self.controller.setValue("right_speed", -self.medium)
+            time.sleep(duration)
 
     def left(self, duration):
         """
@@ -53,19 +55,21 @@ class Rover():
                 parameters:
                     duration(float): sets how long the rover should turn for
         """
-        self.controller.setValue("left_speed", -self.medium)
-        self.controller.setValue("right_speed", self.medium)
-        time.sleep(duration)
+        if self.enabled:
+            self.controller.setValue("left_speed", -self.medium)
+            self.controller.setValue("right_speed", self.medium)
+            time.sleep(duration)
 
-    def stop(self, duration):
+    def pause(self, duration):
         """
-            sends instructions to the Rover to stop for the specified time
+            sends instructions to the rover to pause for the specified time
                 parameters:
-                    duration(float): sets how long the robot should stay stopped for
+                    duration(float): sets how long the robot should stay paused for
         """
-        self.controller.setValue("left_speed", 0)
-        self.controller.setValue("right_speed", 0)
-        time.sleep(duration)
+        if self.enabled:
+            self.controller.setValue("left_speed", 0)
+            self.controller.setValue("right_speed", 0)
+            time.sleep(duration)
 
     def sensorLeft(self, distance = 1):
         """
@@ -112,3 +116,19 @@ class Rover():
                 return True
             else:
                 return False
+
+
+    def stop(self):
+        """
+            disables the rover's ability to receive commands and stops the rover where it currently is
+        """
+        self.controller.setValue("left_speed", 0)
+        self.controller.setValue("right_speed", 0)
+        self.enabled = False
+
+    def start(self):
+        """
+            reenables the rover's ability to receive commands
+            does NOT resume any previously issued commands
+        """
+        self.enabled = True
