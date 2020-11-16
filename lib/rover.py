@@ -9,7 +9,7 @@ class Rover():
         self.slow = slow
         self.medium = medium
         self.fast = fast
-        self.controller.addVariable("sensor", "string", "")
+        self.controller.addVariable("sensor", "str", "")
         self.controller.addVariable("left_speed", "float", 0)
         self.controller.addVariable("right_speed", "float", 0)
         self.controller.start()
