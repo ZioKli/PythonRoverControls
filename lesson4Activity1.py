@@ -2,9 +2,12 @@
 from lib.rover import Rover
 
 
+#Functions used:
+#   Rover.forward()
 
-###########################################
+
 # Write all code within these margins
+###########################################
 
 # Create a new instance of our Rover class
 
@@ -15,4 +18,4 @@ from lib.rover import Rover
 # notice that the rover's wheels do NOT stop rotating when it contacts the wall
 
 
-###########################################W
+###########################################

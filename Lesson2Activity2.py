@@ -1,8 +1,8 @@
 
 
 
-
-
+#functions used:
+#   print() : This function outputs any basic python type's (nums, strings, lists, dictionaries) value to the current terminal
 hello = 'Hello World'
 
 # All Code Should be written inside these lines
