@@ -1,7 +1,7 @@
 # Author: Zion Klinger
 # Description : A class used to control a rover in Simumatik's emulation software. Has all of the functionality to handle initializing a connection with Simumatik's server
 import time
-from PythonRoverControls.lib.Controller import UDP_Controller
+from lib.Controller import UDP_Controller
 class Rover():
     def __init__(self, slow = 1, medium = 2, fast = 4):
         self.enabled = True

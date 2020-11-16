@@ -1,5 +1,5 @@
 
-from PythonRoverControls.lib.rover import Rover
+from lib.rover import Rover
 
 
 
