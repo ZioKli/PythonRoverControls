@@ -17,7 +17,7 @@ from lib.Controller import UDP_Controller
 # you must use the Controller.setValue() if you wish to set a variable on the controller,
 # and you must use Controller.getValue() if you wish to read the variable on the controller.
 
-# set the left and right speeds to 2.0
+# set the left and right speeds to 2.0 and watch the rover roll away toward the wall
 
 
 #######################################################################################
