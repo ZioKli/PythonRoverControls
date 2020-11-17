@@ -16,6 +16,9 @@ from lib.rover import Rover
 
 
 # notice that the rover's wheels do NOT stop rotating when it contacts the wall
+# when you're sending commands to the rover to make sure that they repeat
+# use a while True: loop. This makes the commands inside the loop repeat until
+# you terminate the program
 
 
 #######################################################################################
