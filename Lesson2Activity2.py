@@ -1,9 +1,7 @@
 
-
-
-#functions used:
-#   print() : This function outputs any basic python type's (nums, strings, lists, dictionaries) value to the current terminal
 hello = 'Hello World'
+shouldPrint = False
+
 
 # All Code Should be written inside these lines
 #######################################################################################
@@ -41,6 +39,10 @@ hello = 'Hello World'
 # Create your own variable goodbye and set it equal to the string 'Goodbye Moon' and then use print() to output the
 # variable goodbye
 
+
+
+# Part 5
+# using an if statement print out 'Hello World' if the variable shouldPrint is equal to true
 
 
 ######################################################################################
