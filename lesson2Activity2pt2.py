@@ -1,17 +1,5 @@
 import unittest
 
-
-# This is a function
-# the def keyword means that this is the definition of a function with the name add
-# that takes in two parameters which are the two variables in the parentheses
-# x is the first parameter
-# y is the second parameter
-# everything following the colon and indented is what the function actually does
-# the return keyword gives returns a value to the line of code that called the function
-def add(x, y):
-    z = x + y
-    return z
-
 # All Code Should be written inside these lines
 #######################################################################################
 
